@@ -15,6 +15,8 @@ import {
 } from './FooterStyles'
 
 const Footer = () => {
+  let date = new Date()
+  let year = date.getFullYear()
   return (
     <FooterWrapper>
       <LinkList>
@@ -22,24 +24,21 @@ const Footer = () => {
           <LinkTitle>Call</LinkTitle>
           <LinkItem href='tel:9591631507'>9591631507</LinkItem>
         </LinkColumn>
-        <LinkColumn style={{ marginLeft: '180px' }}>
+        <LinkColumn>
           <LinkTitle>Email</LinkTitle>
           <LinkItem href='mailto:zolasanjanaa@gmail.com'>
             zolasanjanaa@gmail.com
           </LinkItem>
         </LinkColumn>
-        <LinkColumn style={{ marginLeft: '380px' }}>
+        <LinkColumn style={{ paddingLeft: '30px' }}>
           <LinkTitle>Location</LinkTitle>
           <LinkItem href=''>Bangalore,India</LinkItem>
         </LinkColumn>
       </LinkList>
       <SocialIconsContainer>
-        <CompanyContainer>
-          <Slogan>
-            Developed by Sanjanaa Zola{' '}
-            <span style={{ marginLeft: '180px' }}>Copyright © 2022 Zola</span>{' '}
-          </Slogan>
-        </CompanyContainer>
+        <Slogan>Developed by Sanjanaa Zola</Slogan>
+
+        <Slogan>Copyright © {year} SZ</Slogan>
         <SocialContainer>
           <SocialIcons href='https://github.com/SanjanaaZola'>
             <AiFillGithub size='3rem' />
